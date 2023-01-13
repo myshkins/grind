@@ -1,32 +1,40 @@
 import csv
 
 class Solution:
-    def __init__(self):
-        self.i = 0
-        self.j = 0
-        self.p = 0
-        self.q = 0
-        
     def maxSubArray(self, nums: list) -> int:
         i, j = 0, 0 #pointer for compares
         p = (len(nums) - 1) #pointers for maxSubArray
         q = p
         total = sum(nums)
         maximum = total
-        # a, b = 0, 0     #subarray indices
-        while i < p:
-            if (tailsum := sum(nums[j:i + 1])) > maximum:
+        while j < q:
+            if nums[i] > maximum:
+                maximum = nums[i]
+                j = i
+            if nums[p] > maximum:
+                maximum = nums[p]
+                q = p
+            tailsum = sum(nums[j:i + 1])
+            headsum = sum(nums[p:q + 1])
+            if maximum > 0:
+                if tailsum < 0:
+                    i += 1
+                    j = 1
+                if headsum < 0:
+                    p -= 1
+                    q = p
+            if tailsum > maximum:
                 maximum = tailsum
-                # a, b = j, i
             if (headsum := sum(nums[p:q + 1])) > maximum:
                 maximum = headsum
-                # a, b = p, q
-            if tailsum <= 0:
-                j = i
-            if headsum <= 0:
-                q = p
             i += 1
             p -= 1
+            if tailsum <= 0:
+                j += 1
+                i = j
+            if headsum <= 0:
+                q -= 1
+                p = q
         return maximum
 
     def read_input(self):
@@ -56,5 +64,5 @@ nums8 = [0, 0, -3, 1]
 nums9 = [3,-2,-3,-3,1,3,0]
 numsA = [2,-1,-1,2,0,-3,3]
 sol = Solution()
-# nums5 = sol.read_input()
-print(sol.maxSubArray(nums1))
+nums5 = sol.read_input()
+print(sol.maxSubArray(nums5))

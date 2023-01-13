@@ -76,4 +76,4 @@ nums9 = [3,-2,-3,-3,1,3,0]
 numsA = [2,-1,-1,2,0,-3,3]
 sol = Solution()
 nums5 = sol.read_input()
-print(sol.maxSubArray(nums5))
+print(sol.maxSubArray(nums1))
