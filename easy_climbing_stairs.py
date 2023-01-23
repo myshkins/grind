@@ -1,5 +1,3 @@
-from itertools import combinations
-
 def climbStairs(n: int) -> int:
     def climb(n):  
         if n in memo:
