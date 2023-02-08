@@ -1,3 +1,5 @@
-x = [1, 2, 3]
+q = [(3, 2), (5, 6), (6, 9)]
+r, c = q.pop(0)
 
-print(x.)
+print(q)
+print(r, c)
