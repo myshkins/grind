@@ -4,6 +4,8 @@ classic 3sum problem, solution is to:
 2. sort the number array
 3, for each pair binary search for third element that completes sum
 
+this solution is VERY slow and memory greedy
+use pointer approach to optimize
 """
 
 
