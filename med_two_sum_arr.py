@@ -1,6 +1,8 @@
 """
 Given an array of integers a, your task is to find how many of its contiguous
 subarrays of length m contain a pair of integers with a sum equal to k.
+*note this was a CodeSignal assessment problem. I think the solution is off by
+one :o 
 """
 def solution(a, m, k):
     result = 0
