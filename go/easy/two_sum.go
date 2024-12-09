@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+// import "fmt"
 
 func twoSum(nums []int, target int) []int {
   result := make([]int, 0)
@@ -21,9 +21,9 @@ func twoSum(nums []int, target int) []int {
   return result
 }
 
-func main() {
-  nums := []int{3,2,4}
-  target := 6
-  answer := twoSum(nums, target)
-  fmt.Println(answer)
-}
+// func main() {
+//   nums := []int{3,2,4}
+//   target := 6
+//   answer := twoSum(nums, target)
+//   fmt.Println(answer)
+// }
