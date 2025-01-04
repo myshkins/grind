@@ -8,10 +8,10 @@ func scanAndChange(row, col int) {
   gImage[row][col] = targetColor
 
   adjacents := [][]int{
-    {row+1, col},
-    {row, col+1},
-    {row-1, col},
-    {row, col-1},
+    {row-1, col}, // top
+    {row, col+1}, // right
+    {row+1, col}, // bottom
+    {row, col-1}, // left
   }
 
   for _, cell := range adjacents {
@@ -19,7 +19,7 @@ func scanAndChange(row, col int) {
     if cell[0] > len(gImage)-1 || cell[0] < 0 {
       continue
     }
-    if cell[1] > len(cell)-1 || cell[1] < 0 {
+    if cell[1] > len(gImage[0])-1 || cell[1] < 0 {
       continue
     }
     
@@ -48,3 +48,12 @@ func floodFill(image [][]int, sr int, sc int, color int) [][]int {
   scanAndChange(sr, sc)
   return image
 }
+
+// func main() {
+//   input := [][]int{
+//     {1,1,1},
+//     {1,1,0},
+//     {1,0,1},
+//   }
+//   fmt.Println(floodFill(input, 1, 1, 2))
+// }

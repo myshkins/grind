@@ -1,6 +1,5 @@
 package main
 
-import "fmt"
 
 func search(nums []int, target int) int {
   low, hi := 0, len(nums)-1
@@ -21,7 +20,7 @@ func search(nums []int, target int) int {
   return -1
 }
 
-func main() {
-  nums := []int{2, 5}
-  fmt.Println(search(nums, 5))
-}
+// func main() {
+//   nums := []int{2, 5}
+//   fmt.Println(search(nums, 5))
+// }
