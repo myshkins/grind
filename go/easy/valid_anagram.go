@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+// import "fmt"
 
 // a better way to do this could be to keep an array of ints, but this works with all unicode characters
 
