@@ -47,8 +47,8 @@ func lengthOfLongestSubstring(s string) int {
   return result
 }
 
-func main() {
-  s := "pwwkew"
-  res := lengthOfLongestSubstring(s)
-  fmt.Printf("\nres = %v\n", res)
-}
+// func main() {
+//   s := "pwwkew"
+//   res := lengthOfLongestSubstring(s)
+//   fmt.Printf("\nres = %v\n", res)
+// }

@@ -85,17 +85,17 @@ func cloneGraph(node *Node) *Node {
   return copies[0]
 }
 
-func main() {
-  var one = Node{Val: 1, Neighbors: []*Node{}}
-  var two = Node{Val: 2, Neighbors: []*Node{}}
-  var three = Node{Val: 3, Neighbors: []*Node{}}
-  var four = Node{Val: 4, Neighbors: []*Node{}}
-  one.Neighbors = []*Node{&two, &four}
-  two.Neighbors = []*Node{&one, &three}
-  three.Neighbors = []*Node{&two, &four}
-  four.Neighbors = []*Node{&three, &one}
- 
-  copyRoot := cloneGraph(&one)
-  newAdj := make(map[int][]int)
-  bfs(newAdj, copyRoot)
-}
+// func main() {
+//   var one = Node{Val: 1, Neighbors: []*Node{}}
+//   var two = Node{Val: 2, Neighbors: []*Node{}}
+//   var three = Node{Val: 3, Neighbors: []*Node{}}
+//   var four = Node{Val: 4, Neighbors: []*Node{}}
+//   one.Neighbors = []*Node{&two, &four}
+//   two.Neighbors = []*Node{&one, &three}
+//   three.Neighbors = []*Node{&two, &four}
+//   four.Neighbors = []*Node{&three, &one}
+//  
+//   copyRoot := cloneGraph(&one)
+//   newAdj := make(map[int][]int)
+//   bfs(newAdj, copyRoot)
+// }
